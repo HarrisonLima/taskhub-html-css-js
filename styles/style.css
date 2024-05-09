@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f3f3;
+
+  main,
+  input,
+  button {
+    font-family: "Inter", sans-serif;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+}
+
+main > :last-child {
+  margin-top: 128px;
+}
+
+.titulo {
+  color: #00a6fb;
+  display: flex;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.conteudo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.conteudo__tarefas {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: 100%;
+}
+
+.tarefas__pesquisa {
+  display: flex;
+  justify-content: center;
+}
+
+.pesquisa__campo {
+  border: 2px solid #bfbfbf;
+  border-radius: 32px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  color: #bfbfbf;
+  font-size: 20px;
+  height: 56px;
+  padding-left: 48px;
+  width: 400px;
+}
+
+.tarefas__secao {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.secao__titulo {
+  color: #8c8c8c;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.secao__tarefas {
+  column-gap: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+}
+
+.tarefas__tarefa {
+  background-color: #00A6FB;
+  border-radius: 16px;
+  height: 200px;
+  width: 320px;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+}
+
+.acoes__botao {
+  appearance: none;
+  background-color: #00a6fb;
+  border: none;
+  border-radius: 8px;
+  color: #f3f3f3;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 24px;
+}

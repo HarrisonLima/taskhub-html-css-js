@@ -6,19 +6,55 @@
 }
 
 body {
-  background-color: #f3f3f3;
+  background-color: var(--gray-50);
+  font-size: 16px;
+  padding: 64px;
 
+  header,
   main,
   input,
   button {
-    font-family: "Inter", sans-serif;
+    font-family: var(--fonte-primaria);
   }
+
+  --cor-primaria: var(--blue-500);
+  --fonte-primaria: "Inter", sans-serif;
+
+  --blue-50: #eff9ff;
+  --blue-100: #def1ff;
+  --blue-200: #b6e5ff;
+  --blue-300: #75d2ff;
+  --blue-400: #2cbcff;
+  --blue-500: #00a6fb;
+  --blue-600: #0082d4;
+  --blue-700: #0067ab;
+  --blue-800: #00578d;
+  --blue-900: #064974;
+  --blue-950: #042e4d;
+
+  --white: #ffffff;
+  --gray-50: #f7f7f7;
+  --gray-100: #e7e7e7;
+  --gray-200: #d1d1d1;
+  --gray-300: #b0b0b0;
+  --gray-400: #888888;
+  --gray-500: #6d6d6d;
+  --gray-600: #5d5d5d;
+  --gray-700: #4f4f4f;
+  --gray-800: #454545;
+  --gray-900: #3d3d3d;
+  --gray-950: #12121;
+  --dark: #0a0a0a;
+
+  --effect-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  --effect-box-shadow-32: 0px 4px 16px rgba(0, 166, 251, 0.32);
+  --effect-box-shadow-56: 0px 4px 16px rgba(0, 166, 251, 0.56);
 }
 
 main {
   display: flex;
   flex-direction: column;
-  padding: 64px;
 }
 
 main > :last-child {
@@ -26,9 +62,9 @@ main > :last-child {
 }
 
 .titulo {
-  color: #00a6fb;
+  color: var(--cor-primaria);
   display: flex;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
 }
 
@@ -40,8 +76,10 @@ main > :last-child {
 }
 
 .conteudo__tarefas {
+  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 64px;
   width: 100%;
 }
@@ -49,18 +87,67 @@ main > :last-child {
 .tarefas__pesquisa {
   display: flex;
   justify-content: center;
+  width: 336px;
+}
+
+.tarefas__pesquisa:hover {
+  input,
+  input::placeholder {
+    color: var(--gray-500);
+  }
+
+  input:not(:focus) {
+    border-color: var(--gray-300);
+  }
+
+  .pesquisa__icon {
+    background-color: var(--gray-300);
+  }
+
+  .pesquisa__icon > .icon {
+    color: var(--gray-800);
+  }
 }
 
 .pesquisa__campo {
-  border: 2px solid #bfbfbf;
-  border-radius: 32px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-  color: #bfbfbf;
-  font-size: 20px;
+  background-color: var(--gray-50);
+  border: 3px solid var(--gray-200);
+  border-radius: 8px 0 0 8px;
+  color: var(--gray-400);
+  font-size: 1.25rem;
   height: 56px;
-  padding-left: 48px;
-  width: 400px;
+  padding: 0 32px;
+  outline: none;
+  transition: 0.3s border ease-in-out, 0.3s border-color ease-in-out, 0.3s color ease-in-out;
+  width: 280px;
+}
+
+.pesquisa__campo:focus {
+  border: 3px solid var(--cor-primaria);
+}
+
+.pesquisa__campo:focus + .pesquisa__icon {
+  background-color: var(--cor-primaria);
+}
+
+.pesquisa__campo:focus + .pesquisa__icon > .icon {
+  color: var(--gray-100);
+}
+
+.pesquisa__icon {
+  align-items: center;
+  background-color: var(--gray-200);
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s background-color ease-in-out;
+  width: 56px;
+}
+
+.icon {
+  color: var(--gray-700);
+  font-size: 1.5rem;
+  transition: 0.3s color ease-in-out;
 }
 
 .tarefas__secao {
@@ -72,8 +159,8 @@ main > :last-child {
 }
 
 .secao__titulo {
-  color: #8c8c8c;
-  font-size: 32px;
+  color: var(--gray-400);
+  font-size: 2rem;
   font-weight: 500;
 }
 
@@ -85,7 +172,7 @@ main > :last-child {
 }
 
 .tarefas__tarefa {
-  background-color: #00A6FB;
+  background-color: var(--cor-primaria);
   border-radius: 16px;
   height: 200px;
   width: 320px;
@@ -98,11 +185,26 @@ main > :last-child {
 
 .acoes__botao {
   appearance: none;
-  background-color: #00a6fb;
-  border: none;
+  background-color: var(--cor-primaria);
+  border: 3px solid var(--cor-primaria);
   border-radius: 8px;
-  color: #f3f3f3;
-  font-size: 16px;
+  color: var(--gray-50);
+  cursor: pointer;
+  font-size: 1rem;
   font-weight: 700;
+  outline: none;
   padding: 16px 24px;
+  transition: 0.3s background-color ease-in-out, 0.3s border ease-in-out,
+    0.3s box-shadow ease-in-out, 0.3s transform ease-in-out;
+}
+
+.acoes__botao:hover {
+  background-color: var(--blue-600);
+  box-shadow: var(--effect-box-shadow-56);
+  transform: translateY(-4px);
+}
+
+.acoes__botao:focus {
+  background-color: var(--blue-800);
+  box-shadow: var(--effect-box-shadow-32);
 }

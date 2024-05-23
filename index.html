@@ -3,52 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/buttons.css" />
+    <link rel="stylesheet" href="styles/input.css" />
+    <link rel="stylesheet" href="styles/tasks.css" />
+    <link rel="stylesheet" href="styles/typography.css" />
+    <link rel="stylesheet" href="styles/base.css" />
     <title>TaskHub</title>
   </head>
   <body>
     <header>
-      <h1 class="titulo">TaskHub</h1>
+      <h1 class="title">TaskHub</h1>
     </header>
     <main>
-      <div class="conteudo">
-        <div class="conteudo__tarefas">
-          <div class="tarefas__pesquisa">
-            <input
-              type="search"
-              class="pesquisa__campo"
-              autocomplete="on"
-              placeholder="Busque a tarefa..."
-            />
-            <span class="pesquisa__icon">
-              <i class="fa-solid fa-magnifying-glass icon"></i>
-            </span>
-          </div>
-          <section class="tarefas__secao">
-            <h2 class="secao__titulo">Hoje</h2>
-            <div class="secao__tarefas">
-              <div class="tarefas__tarefa"></div>
-              <div class="tarefas__tarefa"></div>
-              <div class="tarefas__tarefa"></div>
-              <div class="tarefas__tarefa"></div>
-              <div class="tarefas__tarefa"></div>
-            </div>
-          </section>
-          <section class="tarefas__secao">
-            <h2 class="secao__titulo">Esta semana</h2>
-            <div class="secao__tarefas">
-              <div class="tarefas__tarefa"></div>
-              <div class="tarefas__tarefa"></div>
-              <div class="tarefas__tarefa"></div>
-              <div class="tarefas__tarefa"></div>
-              <div class="tarefas__tarefa"></div>
-            </div>
-          </section>
+      <div class="box__content">
+        <div class="box__input">
+          <input
+            type="search"
+            class="input--search"
+            autocomplete="on"
+            placeholder="Busque a tarefa..."
+          />
+          <span class="box__icon">
+            <i class="fa-solid fa-magnifying-glass input__icon"></i>
+          </span>
         </div>
+        <section class="box__tasks">
+          <h2 class="task--title">Hoje</h2>
+          <div class="box__task">
+            <div class="task task--done">
+              <span class="task--date">
+                <p>00:00 - 00:00</p>
+                <p>31/12/2024</p>
+              </span>
+              <p>Descrição da tarefa</p>
+              <span class="task--button">
+                <button class="button--state button--state-done">
+                  Concluído
+                </button>
+              </span>
+            </div>
+            <div class="task task--not-done">
+              <span class="task--date">
+                <p>00:00 - 00:00</p>
+                <p>31/12/2024</p>
+              </span>
+              <p>Descrição da tarefa</p>
+              <span class="task--button">
+                <button class="button--state button--state-not-done">
+                  Não concluído
+                </button>
+              </span>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="acoes">
-        <button class="acoes__botao">Adicionar tarefa</button>
+      <div class="box__button">
+        <button class="button button--primary">Adicionar tarefa</button>
       </div>
     </main>
     <footer></footer>

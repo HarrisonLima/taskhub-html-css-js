@@ -1,0 +1,13 @@
+.title,
+.subtitle {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+}

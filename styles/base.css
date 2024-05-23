@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--gray-50);
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 500;
+  padding: 4rem;
+
+  header,
+  main,
+  input,
+  button {
+    font-family: var(--font-primary);
+  }
+
+  --color-primary: var(--blue-500);
+  --font-primary: "Inter", sans-serif;
+
+  --blue-50: #eff9ff;
+  --blue-100: #def1ff;
+  --blue-200: #b6e5ff;
+  --blue-300: #75d2ff;
+  --blue-400: #2cbcff;
+  --blue-500: #00a6fb;
+  --blue-600: #0082d4;
+  --blue-700: #0067ab;
+  --blue-800: #00578d;
+  --blue-900: #064974;
+  --blue-950: #042e4d;
+
+  --white: #ffffff;
+  --gray-50: #f7f7f7;
+  --gray-100: #e7e7e7;
+  --gray-200: #d1d1d1;
+  --gray-300: #b0b0b0;
+  --gray-400: #888888;
+  --gray-500: #6d6d6d;
+  --gray-600: #5d5d5d;
+  --gray-700: #4f4f4f;
+  --gray-800: #454545;
+  --gray-900: #3d3d3d;
+  --gray-950: #12121;
+  --dark: #0a0a0a;
+
+  --effect-box-shadow-primary-enabled: 0 0.25rem 1rem rgba(0, 166, 251, 0.32);
+  --effect-box-shadow-primary-focused: 0 0.25rem 1rem rgba(0, 166, 251, 0.48);
+  --effect-box-shadow-primary-hovered: 0 0.25rem 1rem rgba(0, 166, 251, 0.56);
+
+  --effect-box-shadow-light-enabled: 0 0.25rem 1rem rgba(255, 255, 255, 0.32);
+  --effect-box-shadow-light-focused: 0 0.25rem 1rem rgba(255, 255, 255, 0.48);
+  --effect-box-shadow-light-hovered: 0 0.25rem 1rem rgba(255, 255, 255, 0.56);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main > :last-child {
+  margin-top: 8rem;
+}
+
+.box__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.box__button {
+  display: flex;
+  justify-content: center;
+}

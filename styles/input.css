@@ -1,0 +1,64 @@
+.box__input {
+  display: flex;
+  justify-content: center;
+}
+
+.box__input:hover {
+  input,
+  input::placeholder {
+    color: var(--gray-500);
+  }
+
+  input:not(:focus) {
+    border-color: var(--gray-300);
+  }
+
+  .box__icon {
+    background-color: var(--gray-300);
+  }
+
+  .box__icon > .input__icon {
+    color: var(--gray-800);
+  }
+}
+
+.input--search {
+  background-color: var(--gray-50);
+  border: 0.25rem solid var(--gray-200);
+  border-radius: 0.5rem 0 0 0.5rem;
+  color: var(--gray-400);
+  font-size: 1.25rem;
+  height: 3.5rem;
+  padding: 0 2rem;
+  outline: none;
+  transition: 0.3s all ease-in-out;
+  width: 17.5rem;
+}
+
+.input--search:focus {
+  border: 0.25rem solid var(--color-primary);
+}
+
+.input--search:focus + .box__icon {
+  background-color: var(--color-primary);
+}
+
+.input--search:focus + .box__icon > .input__icon {
+  color: var(--gray-100);
+}
+
+.box__icon {
+  align-items: center;
+  background-color: var(--gray-200);
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s all ease-in-out;
+  width: 3.5rem;
+}
+
+.input__icon {
+  color: var(--gray-700);
+  font-size: 1.5rem;
+  transition: 0.3s all ease-in-out;
+}

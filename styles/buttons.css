@@ -1,6 +1,6 @@
 .button {
   appearance: none;
-  border: 0.25rem solid var(--color-primary);
+  border: 0.125rem solid var(--color-primary);
   box-shadow: var(--effect-box-shadow-primary-enabled);
   border-radius: 0.5rem;
   cursor: pointer;

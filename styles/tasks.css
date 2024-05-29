@@ -44,7 +44,7 @@
   transition: 0.3s all ease-in-out;
 }
 
-.task:focus-within {
+.task--done:focus-within {
   background-color: var(--blue-600);
 }
 

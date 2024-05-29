@@ -1,0 +1,71 @@
+.box__modal[view="true"] {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.box__modal[view="false"]{
+    display: none;
+}
+
+.modal {
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  padding: 4rem;
+  width: fit-content;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  row-gap: 2rem;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.form__input--date {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.form__input label {
+  color: var(--gray-950);
+}
+
+.form__box__buttons {
+  align-self: flex-end;
+  column-gap: 2rem;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.input--form {
+  border: 0.125rem solid var(--gray-200);
+  border-radius: 0.5rem;
+  color: var(--gray-400);
+  font-size: 1rem;
+  height: 3.5rem;
+  padding: 0 1rem;
+  outline: none;
+  transition: 0.3s all ease-in-out;
+}
+
+.input--form:not(:focus):hover {
+  border-color: var(--gray-300);
+}
+
+.input--form:focus {
+  border: 0.125rem solid var(--color-primary);
+}

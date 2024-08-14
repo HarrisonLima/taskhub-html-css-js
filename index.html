@@ -23,6 +23,7 @@
       <div class="box__content">
         <div class="box__input">
           <input
+            id="input-search"
             type="search"
             class="input--search"
             autocomplete="on"
@@ -33,46 +34,31 @@
           </span>
         </div>
         <section class="box__tasks">
-          <h2 class="task--title">Hoje</h2>
-          <div class="box__task">
-            <div class="task task--done">
-              <span class="task--date">
-                <p>00:00 - 00:00</p>
-                <p>31/12/2024</p>
-              </span>
-              <p>Descrição da tarefa</p>
-              <span class="task--button">
-                <button class="button--state button--state-done">
-                  Concluído
-                </button>
-              </span>
-            </div>
-            <div class="task task--not-done">
-              <span class="task--date">
-                <p>00:00 - 00:00</p>
-                <p>31/12/2024</p>
-              </span>
-              <p>Descrição da tarefa</p>
-              <span class="task--button">
-                <button class="button--state button--state-not-done">
-                  Não concluído
-                </button>
-              </span>
-            </div>
-          </div>
+          <h2 id="title-concluidas" class="task--title">Concluídas</h2>
+          <h2 id="title-hoje" class="task--title">Hoje</h2>
+          <div id="box-hoje" class="box__task"></div>
+          <div id="box-concluidas" class="box__task"></div>
+          <h2 id="title-esta-semana" class="task--title">Esta semana</h2>
+          <div id="box-esta-semana" class="box__task"></div>
+          <h2 id="title-proximas-semanas" class="task--title">
+            Próximas semanas
+          </h2>
+          <div id="box-proximas-semanas" class="box__task"></div>
         </section>
         <div class="box__button">
-          <button class="button button--primary">Adicionar tarefa</button>
+          <button id="button-new-task" class="button button--primary">
+            Adicionar tarefa
+          </button>
         </div>
       </div>
-      <div class="box__modal" view="false">
+      <div id="modal" class="box__modal" view="false">
         <div class="modal">
           <h2 class="subtitle">Nova tarefa</h2>
           <form class="modal__form">
             <span class="form__input">
-              <label for="input-descricao">Descrição tarefa</label>
+              <label for="input-task">Descrição tarefa</label>
               <input
-                id="input-descricao"
+                id="input-task"
                 class="input--form"
                 type="text"
                 placeholder="Insira a descrição da tarefa"
@@ -80,26 +66,31 @@
             </span>
             <span class="form__input--date">
               <span class="form__input">
-                <label for="input-inicio">Início</label>
-                <input id="input-inicio" class="input--form" type="time" />
+                <label for="input-start">Início</label>
+                <input id="input-start" class="input--form" type="time" />
               </span>
               <span class="form__input">
-                <label for="input-termino">Término</label>
-                <input id="input-termino" class="input--form" type="time" />
+                <label for="input-end">Término</label>
+                <input id="input-end" class="input--form" type="time" />
               </span>
               <span class="form__input">
-                <label for="input-data">Data</label>
-                <input id="input-data" class="input--form" type="date" />
+                <label for="input-date">Data</label>
+                <input id="input-date" class="input--form" type="date" />
               </span>
             </span>
             <span class="form__box__buttons">
-              <button class="button button--secondary">Cancelar</button>
-              <button class="button button--primary">Confirmar</button>
+              <button id="button-cancel" class="button button--secondary">
+                Cancelar
+              </button>
+              <button id="button-confirm" class="button button--primary">
+                Confirmar
+              </button>
             </span>
           </form>
         </div>
       </div>
     </main>
     <footer></footer>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

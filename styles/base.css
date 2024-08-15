@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: var(--font-primary);
   margin: 0;
   padding: 0;
 }
@@ -13,13 +14,6 @@ body {
   font-weight: 500;
   padding: 4rem;
   position: relative;
-
-  header,
-  main,
-  input,
-  button {
-    font-family: var(--font-primary);
-  }
 
   --color-primary: var(--blue-500);
   --font-primary: "Inter", sans-serif;
@@ -57,10 +51,21 @@ body {
   --effect-box-shadow-light-enabled: 0 0.25rem 1rem rgba(255, 255, 255, 0.32);
   --effect-box-shadow-light-focused: 0 0.25rem 1rem rgba(255, 255, 255, 0.48);
   --effect-box-shadow-light-hovered: 0 0.25rem 1rem rgba(255, 255, 255, 0.56);
+
+  @media (max-width: 48rem) {
+    padding: 3rem;
+  }
+
+  @media (max-width: 30rem) {
+    padding: 2rem;
+  }
 }
 
 header {
-  display: flex;
+  @media (max-width: 30rem) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 main {
@@ -74,10 +79,19 @@ main {
   flex-direction: column;
   gap: 4rem;
   margin-top: 2rem;
+
+  @media (max-width: 48rem) {
+    gap: 3rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 30rem) {
+    gap: 2rem;
+    margin-top: 1rem;
+  }
 }
 
 .box__button {
   display: flex;
   justify-content: center;
-  margin-top: 8rem;
 }

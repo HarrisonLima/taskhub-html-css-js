@@ -33,6 +33,19 @@
   outline: none;
   transition: 0.3s all ease-in-out;
   width: 17.5rem;
+
+  @media (max-width: 48rem) {
+    font-size: 1.125rem;
+    height: 3rem;
+    padding: 0 1.5rem;
+    width: 15rem;
+  }
+
+  @media (max-width: 30rem) {
+    font-size: 1rem;
+    padding: 0 1rem;
+    width: 12rem;
+  }
 }
 
 .input--search:focus {
@@ -55,10 +68,22 @@
   justify-content: center;
   transition: 0.3s all ease-in-out;
   width: 3.5rem;
+
+  @media (max-width: 30rem) {
+    width: 3rem;
+  }
 }
 
 .input__icon {
   color: var(--gray-700);
   font-size: 1.5rem;
   transition: 0.3s all ease-in-out;
+
+  @media (max-width: 48rem) {
+    font-size: 1.125rem;
+  }
+
+  @media (max-width: 30rem) {
+    font-size: 1rem;
+  }
 }
